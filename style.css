@@ -1,1 +1,87 @@
 /* STYLES */
+@font-face {
+    font-family: HCB;
+    src: url("fonts/Helvetica-Condensed-Bold.otf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: HCB, Helvetica, sans-serif;
+}
+
+#nbaLogo {
+    background-image: url(images/nba-logo.png);
+    text-align: center;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    width: 230px;
+    margin-left: -115px;
+    z-index: 10;
+}
+
+#team1 {
+    float: left;
+    width: 25%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    direction: rtl;
+    background-color: #006cb7;
+    color: #fafafa;
+    padding-left: 15px;
+}
+
+#team2 {
+    float: right;
+    width: 25%;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #ed174b;
+    color: #fafafa;
+    padding-right: 15px;
+}
+
+.team {
+    padding: 40px 15px;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.team:hover {
+    cursor: pointer;
+}
+
+.team1:hover {
+    background-color: #005b9a;
+}
+
+.team2:hover {
+    background-color: #d10e3d;
+}
+
+#results table {
+    position: fixed;
+    margin: 0 25%;
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    background-color: #fafafa;
+    color: #626262;
+}
+
+#results table tr:first-child {
+    font-size: 35px;
+}
+
+#results table tr:last-child {
+    font-size: 28px;
+}

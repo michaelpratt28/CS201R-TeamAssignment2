@@ -1,14 +1,70 @@
 <!DOCTYPE html>
 <html ng-app="app">
+
 <head>
     <title>NBA Team Statistics</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
-</head>
-<body ng-controller="NBAController as ctrl">
-
-    
-
+    <script src="http://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="http://code.angularjs.org/1.6.2/angular.min.js"></script>
     <script type="text/javascript" src="app.js"></script>
+</head>
+
+<body ng-controller="NBAController as ctrl" ng-cloak>
+
+    <div id="team1">
+        <div ng-repeat="team in ctrl.allTeams track by $index" class="team team1" 
+            ng-click="selectTeamOne()">
+            {{team}}
+        </div>
+    </div>
+    <div id="results">
+        <!-- TODO: FIX LOGO POSITIONINGS -->
+        <div id="nbaLogo"></div>
+        <table>
+            <tr>
+                <th>Team 1</th>
+                <th>Team 2</th>
+            </tr>
+            <tr>
+                <td id="teamOneStats">
+                    <!--<span ng-repeat="stat in ctrl.teamOneStats" ng-class="{'selected': team1Stat{{$index}} > team2Stat{{$index}}}">Stat0</span>-->
+                    
+                    Stat1<br>
+                    Stat2<br>
+                    Stat3<br>
+                    Stat4<br>
+                    Stat5<br>
+                    Stat6<br>
+                    Stat7<br>
+                    Stat8<br>
+                    Stat9<br>
+                    Stat10
+                </td>
+                <td id="teamTwoStats">
+                    Stat1<br>
+                    Stat2<br>
+                    Stat3<br>
+                    Stat4<br>
+                    Stat5<br>
+                    Stat6<br>
+                    Stat7<br>
+                    Stat8<br>
+                    Stat9<br>
+                    Stat10
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">Results</td>
+            </tr>
+        </table>
+    </div>
+    <div id="team2">
+        <div ng-repeat="team in ctrl.allTeams track by $index" class="team team2" 
+            ng-click="selectTeamTwo()">
+            {{team}}
+        </div>
+    </div>
+
 </body>
+
 </html>
