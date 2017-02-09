@@ -7,13 +7,13 @@ firstApp.controller('NBAController', function ($scope) {
     vm.getAllTeams = function () {
         // FUNCTION TO GET ALL NBA TEAMS ON PAGE LOAD
         // POPULATE vm.allTeams
-         $.ajax({
-            url : "http://api.sportradar.us/nba-t3/league/hierarchy.json?api_key=pq4375zt4kscw2ffbyq99rsq",
-            dataType : "json",
-            success : function(data) {
-                console.log("Success!"); 
-            }
-          });
+        //  $.ajax({
+        //     url : "http://api.sportradar.us/nba-t3/league/hierarchy.json?api_key=pq4375zt4kscw2ffbyq99rsq",
+        //     dataType : "json",
+        //     success : function(data) {
+        //         console.log("Success!"); 
+        //     }
+        //   });
     }
 
     vm.getAllTeams();
